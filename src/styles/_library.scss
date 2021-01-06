@@ -1,0 +1,166 @@
+// .library {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 20rem;
+//   height: 100%;
+//   background-color: white;
+//   box-shadow: 2px 2px 50px rgb(204, 203, 203);
+//   overflow: scroll;
+//   transform: translateX(-100%);
+//   transition: all 0.5s ease;
+//   opacity: 0;
+//   h2 {
+//     padding: 2rem;
+//   }
+// }
+
+// .library-song {
+//   display: flex;
+//   align-items: center;
+//   padding: 1rem 2rem 1rem 2rem;
+//   cursor: pointer;
+//   transition: background 0.5s ease;
+//   img {
+//     width: 30%;
+//   }
+//   &:hover {
+//     background: rgb(194, 243, 245);
+//   }
+// }
+// .song-description {
+//   padding-left: 1rem;
+//   h3 {
+//     font-size: 1rem;
+//   }
+//   h4 {
+//     font-size: 0.7rem;
+//   }
+// }
+
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+// }
+// *::-webkit-scrollbar {
+//   width: 5px;
+// }
+// *::-webkit-scrollbar-track {
+//   background: transparent;
+// }
+// *::-webkit-scrollbar-thumb {
+//   background-color: rgba(155, 155, 155, 0.5);
+//   border-radius: 20px;
+//   border: transparent;
+// }
+
+// .selected {
+//   background: rgb(115, 239, 243);
+// }
+// .active-library {
+//   transform: translateX(0%);
+//   opacity: 1;
+// }
+
+// @media screen and (max-width: 768px) {
+//   .library {
+//     width: 100%;
+//   }
+// }
+
+.library {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 2px 50px rgb(204, 203, 203);
+  // overflow: scroll;
+  background: white;
+  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  h2 {
+    padding: 2rem;
+  }
+  .library-songs {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  // h3 {
+  //   padding: 1.7rem 0;
+  //   padding-left: 1rem;
+  // }
+  // h4 {
+  //   font-size: 0.7rem;
+  //   padding-left: 1rem;
+  // }
+  .song-description {
+    padding-left: 1rem;
+    h3 {
+      font-size: 1.1rem;
+      padding-bottom: 0.2rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+  img {
+    width: 30%;
+  }
+  .library-song {
+    display: flex;
+    // justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    &:hover {
+      background: rgb(194, 243, 245);
+    }
+    .description {
+      padding-left: 1rem;
+      .artist,
+      .songName {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+      .artist {
+        font-size: 0.7rem;
+        padding: 0.2rem 0;
+      }
+    }
+  }
+}
+.library-label {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #c8c8c838;
+  box-shadow: -20px 0px 10px #f0f0f0d4;
+}
+.switchSection {
+  position: sticky;
+  bottom: 0;
+  background: white;
+}
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.activeLibraryBtn {
+  color: white;
+  background: #363636;
+}
+
+.selected {
+  background: rgb(115, 239, 243);
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
